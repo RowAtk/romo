@@ -10,7 +10,11 @@ export interface NavMenuButtonProps {
 export function NavMenuButton({ closed, onClick }: NavMenuButtonProps) {
   const buttonIcon = closed ? faXmark : faBars;
   return (
-    <button type="button" onClick={onClick} className="w-full h-full">
+    <button
+      type="button"
+      onClick={onClick}
+      className="NavMenuButton w-full h-full"
+    >
       <FontAwesomeIcon icon={buttonIcon} className="w-full h-full" />
     </button>
   );

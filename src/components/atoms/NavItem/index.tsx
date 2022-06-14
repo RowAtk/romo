@@ -1,15 +1,21 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import classNames from "classnames";
+import { FCProps } from "../../../contracts/general-contracts";
 
-export interface NavItemProps {
+export interface NavItemProps extends FCProps {
   label?: string;
   route?: string;
   onClick?: () => void;
-  children?: ReactNode;
 }
 
-export function NavItem({ label, route, onClick, children }: NavItemProps) {
+export function NavItem({
+  label,
+  route,
+  onClick,
+  className,
+  children,
+}: NavItemProps) {
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
@@ -26,7 +32,12 @@ export function NavItem({ label, route, onClick, children }: NavItemProps) {
 
   return (
     <div
-      className={classNames(activeStyles, "cursor-pointer")}
+      className={classNames(
+        "NavItem",
+        className,
+        activeStyles,
+        "cursor-pointer"
+      )}
       onClick={onNavClick}
       onKeyDown={onNavClick}
       role="menuitem"

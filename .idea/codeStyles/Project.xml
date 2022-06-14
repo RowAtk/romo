@@ -4,6 +4,9 @@
     <HTMLCodeStyleSettings>
       <option name="HTML_ALIGN_ATTRIBUTES" value="false" />
     </HTMLCodeStyleSettings>
+    <JSCodeStyleSettings version="0">
+      <option name="IMPORT_PREFER_ABSOLUTE_PATH" value="TRUE" />
+    </JSCodeStyleSettings>
     <editorconfig>
       <option name="ENABLED" value="false" />
     </editorconfig>
