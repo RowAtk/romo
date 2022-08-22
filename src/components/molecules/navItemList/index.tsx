@@ -19,14 +19,15 @@ export function NavItemList({ itemClassNames }: NavItemListProps) {
   ];
 
   return (
-    <div>
+    <>
       {items.map((item) => (
         <NavItem
+          key={item.label}
           label={item.label}
           route={item.route}
           className={itemClassNames}
         />
       ))}
-    </div>
+    </>
   );
 }

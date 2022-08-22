@@ -8,7 +8,7 @@ export interface NavMenuButtonProps {
 }
 
 export function NavMenuButton({ closed, onClick }: NavMenuButtonProps) {
-  const buttonIcon = closed ? faXmark : faBars;
+  const buttonIcon = closed ? faBars : faXmark;
   return (
     <button
       type="button"
